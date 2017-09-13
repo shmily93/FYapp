@@ -11,10 +11,16 @@
 		33491F781F5E4A5000D186B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F771F5E4A5000D186B5 /* AppDelegate.m */; };
 		33491F7B1F5E4A5000D186B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F7A1F5E4A5000D186B5 /* ViewController.m */; };
 		33491F7E1F5E4A5000D186B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33491F7C1F5E4A5000D186B5 /* Main.storyboard */; };
-		33491F801F5E4A5000D186B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33491F7F1F5E4A5000D186B5 /* Assets.xcassets */; };
 		33491F831F5E4A5000D186B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33491F811F5E4A5000D186B5 /* LaunchScreen.storyboard */; };
 		33491F8E1F5E4A5000D186B5 /* FYappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F8D1F5E4A5000D186B5 /* FYappTests.m */; };
 		33491F991F5E4A5000D186B5 /* FYappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F981F5E4A5000D186B5 /* FYappUITests.m */; };
+		337F8D2C1F6784DD006B5218 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F8D2B1F6784DD006B5218 /* LoginViewController.m */; };
+		33F8B2B61F679511009F4C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F8B2B51F679511009F4C87 /* Assets.xcassets */; };
+		33F8B2B91F67CABE009F4C87 /* AppDelegate+private.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */; };
+		33F8B2BD1F67DE85009F4C87 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2BC1F67DE85009F4C87 /* Networking.m */; };
+		33F8B2C01F67F659009F4C87 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2BF1F67F659009F4C87 /* AppConfig.m */; };
+		33F8B2C31F67F6EA009F4C87 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2C21F67F6EA009F4C87 /* Constants.m */; };
+		B9130C887C863E798FB351F1 /* libPods-FYapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE090FE88ADF799341B4780C /* libPods-FYapp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28D391F34BDE1B381DCEBF17 /* Pods-FYapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYapp/Pods-FYapp.release.xcconfig"; sourceTree = "<group>"; };
 		33491F701F5E4A5000D186B5 /* FYapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33491F741F5E4A5000D186B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33491F761F5E4A5000D186B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,7 +49,6 @@
 		33491F791F5E4A5000D186B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		33491F7A1F5E4A5000D186B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		33491F7D1F5E4A5000D186B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33491F7F1F5E4A5000D186B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33491F821F5E4A5000D186B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33491F841F5E4A5000D186B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33491F891F5E4A5000D186B5 /* FYappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,20 @@
 		33491F941F5E4A5000D186B5 /* FYappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33491F981F5E4A5000D186B5 /* FYappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYappUITests.m; sourceTree = "<group>"; };
 		33491F9A1F5E4A5000D186B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337F8D2A1F6784DD006B5218 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		337F8D2B1F6784DD006B5218 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		33F8B2B51F679511009F4C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33F8B2B71F67CABE009F4C87 /* AppDelegate+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+private.h"; sourceTree = "<group>"; };
+		33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+private.m"; sourceTree = "<group>"; };
+		33F8B2BB1F67DE85009F4C87 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		33F8B2BC1F67DE85009F4C87 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		33F8B2BE1F67F659009F4C87 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		33F8B2BF1F67F659009F4C87 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		33F8B2C11F67F6EA009F4C87 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		33F8B2C21F67F6EA009F4C87 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		89ED9CFE6939F5609E818153 /* libPods-FYappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FYappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98FAB11DF7ADC7D34E169249 /* Pods-FYapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FYapp/Pods-FYapp.debug.xcconfig"; sourceTree = "<group>"; };
+		EE090FE88ADF799341B4780C /* libPods-FYapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FYapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9130C887C863E798FB351F1 /* libPods-FYapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,8 @@
 				33491F8C1F5E4A5000D186B5 /* FYappTests */,
 				33491F971F5E4A5000D186B5 /* FYappUITests */,
 				33491F711F5E4A5000D186B5 /* Products */,
+				9D72B94AE641D9F02EFE8A4C /* Pods */,
+				F63907F1F2E78A71A84233D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,16 +124,19 @@
 		33491F721F5E4A5000D186B5 /* FYapp */ = {
 			isa = PBXGroup;
 			children = (
+				33F8B2BA1F67DE21009F4C87 /* utilities */,
+				33F8B2B51F679511009F4C87 /* Assets.xcassets */,
 				33491FA61F5E4DF900D186B5 /* Login */,
 				33491F761F5E4A5000D186B5 /* AppDelegate.h */,
 				33491F771F5E4A5000D186B5 /* AppDelegate.m */,
 				33491F791F5E4A5000D186B5 /* ViewController.h */,
 				33491F7A1F5E4A5000D186B5 /* ViewController.m */,
 				33491F7C1F5E4A5000D186B5 /* Main.storyboard */,
-				33491F7F1F5E4A5000D186B5 /* Assets.xcassets */,
 				33491F811F5E4A5000D186B5 /* LaunchScreen.storyboard */,
 				33491F841F5E4A5000D186B5 /* Info.plist */,
 				33491F731F5E4A5000D186B5 /* Supporting Files */,
+				33F8B2B71F67CABE009F4C87 /* AppDelegate+private.h */,
+				33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */,
 			);
 			path = FYapp;
 			sourceTree = "<group>";
@@ -144,8 +170,41 @@
 		33491FA61F5E4DF900D186B5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				337F8D2A1F6784DD006B5218 /* LoginViewController.h */,
+				337F8D2B1F6784DD006B5218 /* LoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		33F8B2BA1F67DE21009F4C87 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				33F8B2BB1F67DE85009F4C87 /* Networking.h */,
+				33F8B2BC1F67DE85009F4C87 /* Networking.m */,
+				33F8B2BE1F67F659009F4C87 /* AppConfig.h */,
+				33F8B2BF1F67F659009F4C87 /* AppConfig.m */,
+				33F8B2C11F67F6EA009F4C87 /* Constants.h */,
+				33F8B2C21F67F6EA009F4C87 /* Constants.m */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		9D72B94AE641D9F02EFE8A4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98FAB11DF7ADC7D34E169249 /* Pods-FYapp.debug.xcconfig */,
+				28D391F34BDE1B381DCEBF17 /* Pods-FYapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F63907F1F2E78A71A84233D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE090FE88ADF799341B4780C /* libPods-FYapp.a */,
+				89ED9CFE6939F5609E818153 /* libPods-FYappTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33491F9D1F5E4A5000D186B5 /* Build configuration list for PBXNativeTarget "FYapp" */;
 			buildPhases = (
+				F0204BC4E7768E90897B1A0E /* [CP] Check Pods Manifest.lock */,
 				33491F6C1F5E4A5000D186B5 /* Sources */,
 				33491F6D1F5E4A5000D186B5 /* Frameworks */,
 				33491F6E1F5E4A5000D186B5 /* Resources */,
+				90F9D02984CB5F0E937CA502 /* [CP] Embed Pods Frameworks */,
+				8BDADF9AC2F98FB83272C715 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,7 +277,7 @@
 				TargetAttributes = {
 					33491F6F1F5E4A5000D186B5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8FUW86522U;
+						DevelopmentTeam = 5EMFG9Z439;
 						ProvisioningStyle = Automatic;
 					};
 					33491F881F5E4A5000D186B5 = {
@@ -256,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33491F831F5E4A5000D186B5 /* LaunchScreen.storyboard in Resources */,
-				33491F801F5E4A5000D186B5 /* Assets.xcassets in Resources */,
+				33F8B2B61F679511009F4C87 /* Assets.xcassets in Resources */,
 				33491F7E1F5E4A5000D186B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +339,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8BDADF9AC2F98FB83272C715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYapp/Pods-FYapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F9D02984CB5F0E937CA502 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYapp/Pods-FYapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0204BC4E7768E90897B1A0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33491F6C1F5E4A5000D186B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F8B2B91F67CABE009F4C87 /* AppDelegate+private.m in Sources */,
+				33F8B2C01F67F659009F4C87 /* AppConfig.m in Sources */,
+				337F8D2C1F6784DD006B5218 /* LoginViewController.m in Sources */,
+				33F8B2C31F67F6EA009F4C87 /* Constants.m in Sources */,
 				33491F7B1F5E4A5000D186B5 /* ViewController.m in Sources */,
 				33491F781F5E4A5000D186B5 /* AppDelegate.m in Sources */,
 				33491F751F5E4A5000D186B5 /* main.m in Sources */,
+				33F8B2BD1F67DE85009F4C87 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,24 +548,26 @@
 		};
 		33491F9E1F5E4A5000D186B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98FAB11DF7ADC7D34E169249 /* Pods-FYapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8FUW86522U;
+				DEVELOPMENT_TEAM = 5EMFG9Z439;
 				INFOPLIST_FILE = FYapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bjhl.FYapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjhl.pay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		33491F9F1F5E4A5000D186B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D391F34BDE1B381DCEBF17 /* Pods-FYapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8FUW86522U;
+				DEVELOPMENT_TEAM = 5EMFG9Z439;
 				INFOPLIST_FILE = FYapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bjhl.FYapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjhl.pay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -520,6 +637,7 @@
 				33491F9F1F5E4A5000D186B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33491FA01F5E4A5000D186B5 /* Build configuration list for PBXNativeTarget "FYappTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +646,7 @@
 				33491FA21F5E4A5000D186B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33491FA31F5E4A5000D186B5 /* Build configuration list for PBXNativeTarget "FYappUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +655,7 @@
 				33491FA51F5E4A5000D186B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

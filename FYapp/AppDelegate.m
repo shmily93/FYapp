@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "AppDelegate+private.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,6 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.window.rootViewController = [[LoginViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    
+    [self configurekeyboardManager];
     return YES;
 }
 
