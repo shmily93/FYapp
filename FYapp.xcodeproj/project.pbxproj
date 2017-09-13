@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33363A311F696B8100C999C1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33363A301F696B8100C999C1 /* RootViewController.m */; };
 		33491F751F5E4A5000D186B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F741F5E4A5000D186B5 /* main.m */; };
 		33491F781F5E4A5000D186B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F771F5E4A5000D186B5 /* AppDelegate.m */; };
 		33491F7B1F5E4A5000D186B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F7A1F5E4A5000D186B5 /* ViewController.m */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		28D391F34BDE1B381DCEBF17 /* Pods-FYapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYapp/Pods-FYapp.release.xcconfig"; sourceTree = "<group>"; };
+		33363A2F1F696B8100C999C1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		33363A301F696B8100C999C1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		33491F701F5E4A5000D186B5 /* FYapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33491F741F5E4A5000D186B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33491F761F5E4A5000D186B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33363A2B1F696AEE00C999C1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				33363A2F1F696B8100C999C1 /* RootViewController.h */,
+				33363A301F696B8100C999C1 /* RootViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		33491F671F5E4A5000D186B5 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +136,9 @@
 		33491F721F5E4A5000D186B5 /* FYapp */ = {
 			isa = PBXGroup;
 			children = (
-				33F8B2BA1F67DE21009F4C87 /* utilities */,
-				33F8B2B51F679511009F4C87 /* Assets.xcassets */,
+				33363A2B1F696AEE00C999C1 /* Root */,
 				33491FA61F5E4DF900D186B5 /* Login */,
+				33F8B2BA1F67DE21009F4C87 /* utilities */,
 				33491F761F5E4A5000D186B5 /* AppDelegate.h */,
 				33491F771F5E4A5000D186B5 /* AppDelegate.m */,
 				33491F791F5E4A5000D186B5 /* ViewController.h */,
@@ -134,6 +146,7 @@
 				33491F7C1F5E4A5000D186B5 /* Main.storyboard */,
 				33491F811F5E4A5000D186B5 /* LaunchScreen.storyboard */,
 				33491F841F5E4A5000D186B5 /* Info.plist */,
+				33F8B2B51F679511009F4C87 /* Assets.xcassets */,
 				33491F731F5E4A5000D186B5 /* Supporting Files */,
 				33F8B2B71F67CABE009F4C87 /* AppDelegate+private.h */,
 				33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */,
@@ -397,6 +410,7 @@
 				337F8D2C1F6784DD006B5218 /* LoginViewController.m in Sources */,
 				33F8B2C31F67F6EA009F4C87 /* Constants.m in Sources */,
 				33491F7B1F5E4A5000D186B5 /* ViewController.m in Sources */,
+				33363A311F696B8100C999C1 /* RootViewController.m in Sources */,
 				33491F781F5E4A5000D186B5 /* AppDelegate.m in Sources */,
 				33491F751F5E4A5000D186B5 /* main.m in Sources */,
 				33F8B2BD1F67DE85009F4C87 /* Networking.m in Sources */,
