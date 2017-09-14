@@ -11,5 +11,5 @@
 @interface AppDelegate (private)
 
 - (void)configurekeyboardManager;
-
+- (void)setupViewControllers;
 @end

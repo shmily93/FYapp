@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate+private.h"
+#import "LoginViewController.h"
+#import "RootViewController.h"
+#import <M9Dev/M9Dev.h>
 
 @implementation AppDelegate (private)
 
@@ -18,4 +21,11 @@
 
 }
 
+- (void)setupViewControllers {
+    //如果已登录就进入主页，否则展示登录页面
+    LoginViewController *loginVC = [LoginViewController new];
+    UINavigationController *navi = [UINavigationController navigationControllerWithRootViewController:loginVC];
+    [[RootViewController shareInstance] switchViewController:navi completion:nil];
+
+}
 @end

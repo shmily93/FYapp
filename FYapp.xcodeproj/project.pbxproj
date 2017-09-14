@@ -15,7 +15,11 @@
 		33491F831F5E4A5000D186B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33491F811F5E4A5000D186B5 /* LaunchScreen.storyboard */; };
 		33491F8E1F5E4A5000D186B5 /* FYappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F8D1F5E4A5000D186B5 /* FYappTests.m */; };
 		33491F991F5E4A5000D186B5 /* FYappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33491F981F5E4A5000D186B5 /* FYappUITests.m */; };
+		3356D1951F6A88FB00FA2044 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3356D1941F6A88FB00FA2044 /* User.m */; };
+		3356D1981F6A891B00FA2044 /* LoginCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3356D1971F6A891B00FA2044 /* LoginCenter.m */; };
 		337F8D2C1F6784DD006B5218 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F8D2B1F6784DD006B5218 /* LoginViewController.m */; };
+		3395EAE41F6A35B10091317A /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3395EAE31F6A35B10091317A /* UIViewController+Ext.m */; };
+		3395EAE71F6A6AB00091317A /* MBProgressHUD+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3395EAE61F6A6AB00091317A /* MBProgressHUD+Ext.m */; };
 		33F8B2B61F679511009F4C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F8B2B51F679511009F4C87 /* Assets.xcassets */; };
 		33F8B2B91F67CABE009F4C87 /* AppDelegate+private.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */; };
 		33F8B2BD1F67DE85009F4C87 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8B2BC1F67DE85009F4C87 /* Networking.m */; };
@@ -60,8 +64,16 @@
 		33491F941F5E4A5000D186B5 /* FYappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33491F981F5E4A5000D186B5 /* FYappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYappUITests.m; sourceTree = "<group>"; };
 		33491F9A1F5E4A5000D186B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3356D1931F6A88FB00FA2044 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3356D1941F6A88FB00FA2044 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3356D1961F6A891B00FA2044 /* LoginCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCenter.h; sourceTree = "<group>"; };
+		3356D1971F6A891B00FA2044 /* LoginCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCenter.m; sourceTree = "<group>"; };
 		337F8D2A1F6784DD006B5218 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		337F8D2B1F6784DD006B5218 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3395EAE21F6A35B10091317A /* UIViewController+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Ext.h"; sourceTree = "<group>"; };
+		3395EAE31F6A35B10091317A /* UIViewController+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Ext.m"; sourceTree = "<group>"; };
+		3395EAE51F6A6AB00091317A /* MBProgressHUD+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Ext.h"; sourceTree = "<group>"; };
+		3395EAE61F6A6AB00091317A /* MBProgressHUD+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Ext.m"; sourceTree = "<group>"; };
 		33F8B2B51F679511009F4C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F8B2B71F67CABE009F4C87 /* AppDelegate+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+private.h"; sourceTree = "<group>"; };
 		33F8B2B81F67CABE009F4C87 /* AppDelegate+private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+private.m"; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 		33491F721F5E4A5000D186B5 /* FYapp */ = {
 			isa = PBXGroup;
 			children = (
+				3356D1921F6A88EA00FA2044 /* LoginCenter */,
 				33363A2B1F696AEE00C999C1 /* Root */,
 				33491FA61F5E4DF900D186B5 /* Login */,
 				33F8B2BA1F67DE21009F4C87 /* utilities */,
@@ -189,6 +202,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		3356D1921F6A88EA00FA2044 /* LoginCenter */ = {
+			isa = PBXGroup;
+			children = (
+				3356D1931F6A88FB00FA2044 /* User.h */,
+				3356D1941F6A88FB00FA2044 /* User.m */,
+				3356D1961F6A891B00FA2044 /* LoginCenter.h */,
+				3356D1971F6A891B00FA2044 /* LoginCenter.m */,
+			);
+			path = LoginCenter;
+			sourceTree = "<group>";
+		};
 		33F8B2BA1F67DE21009F4C87 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +222,10 @@
 				33F8B2BF1F67F659009F4C87 /* AppConfig.m */,
 				33F8B2C11F67F6EA009F4C87 /* Constants.h */,
 				33F8B2C21F67F6EA009F4C87 /* Constants.m */,
+				3395EAE21F6A35B10091317A /* UIViewController+Ext.h */,
+				3395EAE31F6A35B10091317A /* UIViewController+Ext.m */,
+				3395EAE51F6A6AB00091317A /* MBProgressHUD+Ext.h */,
+				3395EAE61F6A6AB00091317A /* MBProgressHUD+Ext.m */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -405,12 +433,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3395EAE41F6A35B10091317A /* UIViewController+Ext.m in Sources */,
 				33F8B2B91F67CABE009F4C87 /* AppDelegate+private.m in Sources */,
 				33F8B2C01F67F659009F4C87 /* AppConfig.m in Sources */,
 				337F8D2C1F6784DD006B5218 /* LoginViewController.m in Sources */,
 				33F8B2C31F67F6EA009F4C87 /* Constants.m in Sources */,
 				33491F7B1F5E4A5000D186B5 /* ViewController.m in Sources */,
 				33363A311F696B8100C999C1 /* RootViewController.m in Sources */,
+				3356D1981F6A891B00FA2044 /* LoginCenter.m in Sources */,
+				3395EAE71F6A6AB00091317A /* MBProgressHUD+Ext.m in Sources */,
+				3356D1951F6A88FB00FA2044 /* User.m in Sources */,
 				33491F781F5E4A5000D186B5 /* AppDelegate.m in Sources */,
 				33491F751F5E4A5000D186B5 /* main.m in Sources */,
 				33F8B2BD1F67DE85009F4C87 /* Networking.m in Sources */,

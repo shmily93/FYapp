@@ -8,6 +8,8 @@ target 'FYapp' do
   # Pods for FYapp
   
   pod 'Masonry'
+  pod 'YYModel'
+  pod 'MBProgressHUD'
   pod 'IQKeyboardManager'
   pod 'AFNetworking', '~> 3.0'
   pod 'M9Dev', :git => 'https://github.com/iwill/M9Dev.git', :branch => 'public'

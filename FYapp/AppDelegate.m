@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginViewController.h"
 #import "AppDelegate+private.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,9 +21,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    self.window.rootViewController = [[LoginViewController alloc] init];
+    self.window.rootViewController = [RootViewController shareInstance];
     [self.window makeKeyAndVisible];
     
+    [self setupViewControllers];
     [self configurekeyboardManager];
     return YES;
 }

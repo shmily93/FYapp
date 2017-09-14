@@ -48,14 +48,18 @@ PODS:
     - NSString-UrlEncode
     - Reachability
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - NSString-UrlEncode (2.1.0)
   - Reachability (3.2)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - IQKeyboardManager
   - M9Dev (from `https://github.com/iwill/M9Dev.git`, branch `public`)
   - Masonry
+  - MBProgressHUD
+  - YYModel
 
 EXTERNAL SOURCES:
   M9Dev:
@@ -74,9 +78,11 @@ SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   M9Dev: 56d9ab1b80a96ae08325c168a9c4023674922993
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   NSString-UrlEncode: 92dcb01cac33ef036cda76baf0e4378b18779e47
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 072a3d74c8ccc80cd00650bb749f33c5c9caadfe
+PODFILE CHECKSUM: 3c1b331aba8814f73b300bdb1b18436692a39b7a
 
 COCOAPODS: 1.2.1
