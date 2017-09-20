@@ -24,14 +24,14 @@
 #if DEBUG
     switch (self.deployType) {
         case DeployType_test:
-            return [NSURL URLWithString:@"test"];
+            return [NSURL URLWithString:@"http://shizi.ctest.baijiahulian.com"];
         case DeployType_beta:
-            return [NSURL URLWithString:@"beta"];
+            return [NSURL URLWithString:@"http://beta-shizi.baijiahulian.com"];
         default:
             break;
     }
 #endif
-    return [NSURL URLWithString:@"www"];
+    return [NSURL URLWithString:@"http://shizi.baijiahulian.com"];
 }
 
 - (NSString *)appVersion {

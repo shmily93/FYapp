@@ -8,7 +8,7 @@
 
 #import <MBProgressHUD/MBProgressHUD.h>
 
-static const NSTimeInterval ProgressHudTimeInterval = 2.0;
+static const NSTimeInterval ProgressHudTimeInterval = 12.0;
 
 @interface MBProgressHUD (Ext)
 

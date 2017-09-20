@@ -111,13 +111,21 @@
 - (void)loginAction:(id)sender {
     NSLog(@"login");
     self.doneButton.enabled = NO;
-    [MBProgressHUD showLoading:@"加载中" toView:self.view];
+//    [MBProgressHUD showLoading:@"加载中" toView:self.view];
     typeof(self) __weak __weak_self__ = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        typeof(__weak_self__) __strong self = __weak_self__;
+//    });
+    
+    [Networking post:@"/mobile/login.do" parameters:@{@"userName":@"fanyi01",@"password":@"fanyi01"} success:^(NSURLSessionDataTask *task, Response *respon) {
         typeof(__weak_self__) __strong self = __weak_self__;
-        [MBProgressHUD closeLoadinginView:self.view];
+        [MBProgressHUD showSuccLoadingThenHide:@"登陆成功" toView:self.view completionHandler:nil];
         self.doneButton.enabled = YES;
-    });
+    } failure:^(NSURLSessionDataTask *task, Response *respon) {
+        typeof(__weak_self__) __strong self = __weak_self__;
+        [MBProgressHUD showErrorLoadingThenHide:respon.message toView:self.view completionHandler:nil];
+        self.doneButton.enabled = YES;
+    }];
 }
 
 #pragma mark - get

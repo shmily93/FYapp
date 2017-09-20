@@ -27,7 +27,7 @@
                       success:(void(^)(NSURLSessionDataTask *task, Response *respon))success
                       failure:(void(^)(NSURLSessionDataTask *task, Response *respon))failure {
     return [self makeRequest:^NSMutableURLRequest *(NSString *urlPath, NSDictionary *parameters, NSError *__autoreleasing *serializationError) {
-        return [self.requestSerializer requestWithMethod:@"GET" URLString:pathString parameters:parameters error:serializationError];
+        return [self.requestSerializer requestWithMethod:@"GET" URLString:urlPath parameters:parameters error:serializationError];
     } makeTask:^__kindof NSURLSessionTask *(NSURLRequest *request, void (^completionHandler)(NSURLResponse *response, id responseObject, NSError *error)) {
         return [self dataTaskWithRequest:request completionHandler:completionHandler];
     } urlString:pathString parameters:parameters success:success failure:failure];
@@ -38,7 +38,7 @@
                        success:(void(^)(NSURLSessionDataTask *task, Response *respon))success
                        failure:(void(^)(NSURLSessionDataTask *task, Response *respon))failure {
     return [self makeRequest:^NSMutableURLRequest *(NSString *urlPath, NSDictionary *parameters, NSError *__autoreleasing *serializationError) {
-        return [self.requestSerializer requestWithMethod:@"POST" URLString:pathString parameters:parameters error:serializationError];
+        return [self.requestSerializer requestWithMethod:@"POST" URLString:urlPath parameters:parameters error:serializationError];
     } makeTask:^__kindof NSURLSessionTask *(NSURLRequest *request, void (^completionHandler)(NSURLResponse *response, id responseObject, NSError *error)) {
         return [self dataTaskWithRequest:request completionHandler:completionHandler];
     } urlString:pathString parameters:parameters success:success failure:failure];
@@ -51,7 +51,7 @@
                            success:(void(^)(NSURLSessionUploadTask *task, Response *respon))success
                            failure:(void(^)(NSURLSessionUploadTask *task, Response *respon))failure {
     return [self makeRequest:^NSMutableURLRequest *(NSString *urlPath, NSDictionary *parameters, NSError *__autoreleasing *serializationError) {
-        return [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:pathString parameters:parameters constructingBodyWithBlock:constructing error:serializationError];
+        return [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:urlPath parameters:parameters constructingBodyWithBlock:constructing error:serializationError];
     } makeTask:^__kindof NSURLSessionTask *(NSURLRequest *request, void (^completionHandler)(NSURLResponse *response, id responseObject, NSError *error)) {
         return [self uploadTaskWithStreamedRequest:request progress:progress completionHandler:completionHandler];
     } urlString:pathString parameters:parameters success:success failure:failure];
@@ -64,7 +64,7 @@
                                success:(void(^)(NSURLSessionDownloadTask *task, Response *respon))success
                                failure:(void(^)(NSURLSessionDownloadTask *task, Response *respon))failure {
     return [self makeRequest:^NSMutableURLRequest *(NSString *urlPath, NSDictionary *parameters, NSError *__autoreleasing *serializationError) {
-        return [self.requestSerializer requestWithMethod:@"GET" URLString:pathString parameters:parameters error:serializationError];
+        return [self.requestSerializer requestWithMethod:@"GET" URLString:urlPath parameters:parameters error:serializationError];
     } makeTask:^__kindof NSURLSessionTask *(NSURLRequest *request, void (^completionHandler)(NSURLResponse *response, id responseObject, NSError *error)) {
         return [self downloadTaskWithRequest:request progress:progress destination:destination completionHandler:completionHandler];
     } urlString:pathString parameters:parameters success:success failure:failure];
@@ -78,6 +78,9 @@
                                    success:(void(^)(__kindof NSURLSessionTask *task, Response *respon))success
                                    failure:(void(^)(__kindof NSURLSessionTask *task, Response *respon))failure {
     NSError *serializationError = nil;
+    
+    urlString = [[NSURL URLWithString:urlString relativeToURL:self.baseURL] absoluteString];
+    
     NSMutableURLRequest *request = makeRequest(urlString, parameters, &serializationError);
     
     if(!request || serializationError) {
@@ -132,7 +135,7 @@
             else {
                 if(failure) {
                     dispatch_async(self.completionQueue ?:dispatch_get_main_queue(), ^{
-                        failure(task, [Response failureResponseWithMessage:error.localizedDescription]);
+                        failure(task, [Response failureResponseWithMessage:responses.message]);
                     });
                     return;
                 }
@@ -159,7 +162,7 @@
 + (instancetype)responseWithObject:(id)responseObject {
     Response *response = [Response new];
     response.responseObject = responseObject;
-    return responseObject;
+    return response;
 }
 
 + (instancetype)successResponseWithData:(NSDictionary *)data {

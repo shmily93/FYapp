@@ -9,7 +9,7 @@ target 'FYapp' do
   
   pod 'Masonry'
   pod 'YYModel'
-  pod 'MBProgressHUD'
+  pod 'MBProgressHUD', :git => 'https://github.com/matej/MBProgressHUD.git', :branch =>'legacy'
   pod 'IQKeyboardManager'
   pod 'AFNetworking', '~> 3.0'
   pod 'M9Dev', :git => 'https://github.com/iwill/M9Dev.git', :branch => 'public'

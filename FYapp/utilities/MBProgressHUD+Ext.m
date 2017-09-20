@@ -33,8 +33,7 @@
     if(!hud) {
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    
-    [hud showLoadingWithImage:[UIImage imageNamed:@"error_icon"] message:message delay:ProgressHudTimeInterval onHide:completionHandler];
+    [hud showErrorLoadingThenHide:message completionHandler:completionHandler];
 }
 
 //成功的loading,ProgressHudTimeInterval后消失
@@ -83,15 +82,15 @@
     if(!hud) {
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    hud.detailsLabel.text = msg;
-    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+//    hud.detailsLabel.text = msg;
+//    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+    hud.detailsLabelText = msg;
+    hud.detailsLabelFont = [UIFont systemFontOfSize:16];
     
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.removeFromSuperViewOnHide = YES;
-    
-    hud.removeFromSuperViewOnHide = YES;
 
-    [hud hideAnimated:YES afterDelay:2];
+    [hud hide:YES afterDelay:2];
     
     if(onHide) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -115,12 +114,12 @@
     if(!hud) {
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    hud.detailsLabel.text = message;
-    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
-    
+//    hud.detailsLabel.text = message;
+//    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+    hud.detailsLabelText = message;
+    hud.detailsLabelFont = [UIFont systemFontOfSize:16];
+
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.removeFromSuperViewOnHide = YES;
-    
     hud.removeFromSuperViewOnHide = YES;
     return hud;
 }
@@ -128,14 +127,14 @@
 + (void)closeLoadinginView:(UIView *)view {
     MBProgressHUD *hud = [MBProgressHUD HUDForView:view];
     if(hud) {
-        [hud hideAnimated:YES];
+        [hud hide:YES];
     }
 }
 
 #pragma mark - private
 - (void)showLoadingWithImage:(UIImage *)image message:(NSString *)message delay:(float)delay onHide:(void(^)())onHide {
     if(image == nil) {
-        [self hideAnimated:YES];
+        [self hide:YES];
         if(onHide) {
             onHide();
         }
@@ -143,11 +142,14 @@
     }
     
     MBProgressHUD *hud = self;
-    hud.detailsLabel.text = nil;
-    hud.label.text = nil;
+//    hud.detailsLabel.text = nil;
+//    hud.label.text = nil;
+    
     hud.userInteractionEnabled = false;
     hud.mode = MBProgressHUDModeCustomView;
     hud.removeFromSuperViewOnHide = YES;
+//    hud.opacity = 0.7;
+//    hud.dimBackground = NO;
 
     UIView *customView = [UIView new];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -175,16 +177,16 @@
     
     CGFloat strikeWidth = textSize.width;
     CGFloat height = textSize.height > 13 ? textSize.height: 13;
-    textLabel.frame = CGRectMake(5, CGRectGetMaxY(imageFrame) + 10, strikeWidth, height);
-    customView.frame = CGRectMake(0, 0, 10 + strikeWidth, CGRectGetMaxY(textLabel.frame));
+    textLabel.frame = CGRectMake(5, CGRectGetMaxY(imageFrame) + 5, strikeWidth, height);
+    customView.frame = CGRectMake(0, 0, 5 + strikeWidth, CGRectGetMaxY(textLabel.frame));
     [customView addSubview:textLabel];
     
     imageFrame.origin.x = (customView.frame.size.width - imageFrame.size.width)/2;
     imageView.frame = imageFrame;
     
     hud.customView = customView;
-    [hud showAnimated:YES];
-    [hud hideAnimated:YES afterDelay:delay];
+    [hud show:YES];
+    [hud hide:YES afterDelay:delay];
     
     if(onHide) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
